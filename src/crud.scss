@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: aliceblue;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    .top {
+        height: 100px;
+        background-color: cornflowerblue;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .bottom {
+        height: 100px;
+        background-color: cornflowerblue;
+        width: 100%;
+    }
+}
