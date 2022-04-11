@@ -8,34 +8,24 @@ function Scooter({ scooter, deleteScooter, show }) {
     
     return (
         <>
-        {/* <div className="col-lg-12 col-md-12 col-sm-10">
-            <div className="card m-2">
-                <div style={{ boxShadow: "5px 5px #888888" }} className="card-body"> */}
-                    {/* <h5>Paspirtuko registracijos kodas</h5>
-                    <h6>///{}</h6>
-                    <span>Paspirtuko paskutinio naudojimo data: {}</span>
-                    <span>Paspirtuko nuvažiuoti kilometrai: {}</span>
-                    <span>Laisvas: {}</span> */}
-                <li>
-                    <div className="content">
-                        <span>{scooter.type}</span>
-                        <i>{scooter.color}</i>
-                        {
-                            scooter.isalive ? <div className="isalive"></div> : null
-                        }
-                    </div>
-                    <div className="butons">
-                        <button type="button" className="btn" onClick={() => deleteScooter(scooter.id)}>
+        
+        <tr>
+                    <td>{scooter.registrationCode}</td>
+                    <td>{scooter.lastUseTime}</td>
+                    <td>{scooter.newDate}</td>
+                    <td>{scooter.totalRideKilometres}</td>
+                    <td>{scooter.isBusy}</td>
+                        <td>
+                        <button type="button" className="btn delete" onClick={() => deleteScooter(scooter.id)}>
                             Trinti
                         </button>
-                        <button type="button" className="btn" onClick={() => show(scooter.id)}>
+                        </td>
+                        <td>
+                        <button type="button" className="btn edit" onClick={() => show(scooter.id)}>
                             Redaguoti
                         </button>
-                    </div>
-                </li>
-                {/* </div>
-            </div>
-        </div> */}
+                        </td>
+        </tr>
         </>
     )
 

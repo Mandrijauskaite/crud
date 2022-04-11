@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
-function Redagavimas() { // modal
+function Redagavimas() {
 
     return (
         <>
-        <div className=''>
+        {/* <div className=''>
             <h5 className=''>Redaguojama</h5>
             <div className=''>
                 <input type="text" style={{ fontWeight: "border", techtAlign: "center" }} />
@@ -35,7 +35,7 @@ function Redagavimas() { // modal
                 <input type="text"  />
             </div>
         <button type="button" className="btn">SAUGOTI</button>
-        </div>
+        </div> */}
 
         </>
     )
