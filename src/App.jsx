@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-import NewScooter from './Components/crud/NewScooter';
-// import './App.css';
-import Redagavimas from './Components/crud/Redagavimas';
+import Create from './Components/crud/Create';
 import Rusiuoti from './Components/crud/Rusiuoti';
 import Scooters from './Components/crud/Scooters';
 // import axios from 'axios';
@@ -15,13 +13,13 @@ const data = [
     registrationCode: "08",
     isBusy: 1,
     lastUseTime: "03/04/2022",
-    totalRideKilometres: 1.44,
+    totalRideKilometres: 100.51,
   }, {
     id: 2,
     registrationCode: "12",
     isBusy: 1,
     lastUseTime: "11/04/2022",
-    totalRideKilometres: 1.45,
+    totalRideKilometres: 55.50,
   },
 ];
 
@@ -77,14 +75,17 @@ function App() {
     <div className="app">
 
       <div className="top">
-        <h1 className="h1">Kolt</h1>
+        <h1 className="h1">Colt</h1>
+        <h4 className="h4">paspirtukų nuoma</h4>
       </div>
-      <Rusiuoti></Rusiuoti>
-      <NewScooter></NewScooter>
-      <h4></h4>
-      <Scooters scooters={scooters}></Scooters>
-      <Redagavimas></Redagavimas>
-      <div className="btn">
+      <div>
+        <Create></Create>
+        <div className="btn">
+      </div>
+        <Rusiuoti></Rusiuoti>
+        <h4></h4>
+        <Scooters scooters={scooters}></Scooters>
+
       </div>
 
     </div>

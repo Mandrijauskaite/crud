@@ -23,16 +23,19 @@ function Scooters({ scooters, deleteScooter, show }) {
         <div className="table-wrapper">
             <h2 className="table-title">paspirtukų suvestinė</h2>
             <table className="fl-table">
-                <thead>
 
+                <thead>
                     <tr>
                         <th>Reg. numeris</th> {/* Atvaizduojama registrationCode  reikšmė (neredaguojama) */}
                         <th>Naudojimo data</th> {/* Šalia įrašo su paskutinio naudojimo data (neredaguojama) */}
                         <th>Rida (km)</th> {/* Šalia laukelio su paspirtuko rida (kilometrais, neredaguojama) */}
                         <th>Nuvažiuota (km)</th> {/* turi būti laukelis, kuriame galima būtų įvesti tos dienos paspirtuku nuvažiuotą atstumą. Per dieną nuvažiuoti kilometrai sumuojasi su bendru kiekiu ir suma įrašoma į localStorage. */}
                         <th>Užimtas / Laisvas</th> {/* Įrašas iš localStorage laukelio isBusy turi būti paverčiamas į “užimtas” arba “laisvas”, priklausomai nuo laukelio reikšmės.*/}
+                        <th>Trinti</th>
+                        <th>Redaguoti</th>
                     </tr>
                 </thead>
+                
                 {
                     scooters.map((scooter) => (<Scooter key={scooter.id} scooter={scooter} />))
                 }
